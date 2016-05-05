@@ -1,2 +1,25 @@
 # stylelint-config-idiomatic-order
-stylelint + idiomatic-css = ❤️
+
+> stylelint + idiomatic-css = ❤️
+
+Order your styles based on [idiomatic-css](https://github.com/necolas/idiomatic-css#declaration-order).
+
+## Installation
+
+```sh
+npm install stylelint-config-idiomatic-order
+```
+
+## Usage
+
+Set your stylelint config to:
+
+```json
+{
+  "extends": "stylelint-config-idiomatic-order"
+}
+```
+
+You can easily [extend](https://github.com/stylelint/stylelint/blob/master/docs/user-guide/configuration.md#extends) the config to your needs.
+
+## [License](LICENSE)
