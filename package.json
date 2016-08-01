@@ -1,14 +1,14 @@
 {
   "name": "stylelint-config-idiomatic-order",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "stylelint + idiomatic-css = ❤️",
   "main": "index.js",
   "dependencies": {
-    "stylelint": "^6.2.2",
-    "stylelint-config-standard": "^6.0.0"
+    "stylelint": "^7.0.3",
+    "stylelint-config-standard": "^11.0.0"
   },
   "devDependencies": {
-    "eslint": "^2.9.0"
+    "eslint": "^3.2.0"
   },
   "scripts": {
     "lint": "eslint --fix src.js",
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/haihappen/stylelint-config-idiomatic-order.git"
+    "url": "git+https://github.com/ream88/stylelint-config-idiomatic-order.git"
   },
   "keywords": [
     "stylelint",
@@ -27,7 +27,7 @@
   "author": "Mario Uher <uher.mario@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/haihappen/stylelint-config-idiomatic-order/issues"
+    "url": "https://github.com/ream88/stylelint-config-idiomatic-order/issues"
   },
-  "homepage": "https://github.com/haihappen/stylelint-config-idiomatic-order#readme"
+  "homepage": "https://github.com/ream88/stylelint-config-idiomatic-order#readme"
 }
