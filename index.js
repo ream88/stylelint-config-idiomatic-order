@@ -53,8 +53,8 @@ module.exports = {
   "extends": "stylelint-config-standard",
   "rules": {
     "declaration-block-properties-order": [
-      { "emptyLineBefore": "always", "properties": positioning },
-      { "emptyLineBefore": "always", "properties": displayAndBoxModel }
+      { "properties": positioning },
+      { "properties": displayAndBoxModel }
     ]
   }
 };
