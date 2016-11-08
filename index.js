@@ -58,7 +58,8 @@ module.exports = {
   "rules": {
     "declaration-block-properties-order": [
       { "properties": positioning },
-      { "properties": displayAndBoxModel }
+      { "properties": displayAndBoxModel },
+      { "unspecified": "bottomAlphabetical" }
     ]
   }
 };
