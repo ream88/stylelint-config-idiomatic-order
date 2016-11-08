@@ -30,7 +30,7 @@ var positioning = []
 var displayAndBoxModel = []
   .concat([
     "display",
-    "overflow",
+    "overflow"
   ])
   .concat(minMax("width"))
   .concat(minMax("height"))
