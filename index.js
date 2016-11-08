@@ -16,6 +16,10 @@ function trbl(prefix) {
   ]);
 }
 
+function minMax(suffix) {
+  return [suffix, "min-" + suffix, "max-" + suffix];
+}
+
 var positioning = []
   .concat([
     "position",
@@ -27,11 +31,11 @@ var displayAndBoxModel = []
   .concat([
     "display",
     "overflow",
-    "box-sizing",
-    "width",
-    "height"
   ])
+  .concat(minMax("width"))
+  .concat(minMax("height"))
   .concat([
+    "box-sizing",
     "align-content",
     "align-items",
     "align-self",
