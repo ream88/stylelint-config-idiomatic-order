@@ -36,9 +36,6 @@ var displayAndBoxModel = []
   .concat(minMax("height"))
   .concat([
     "box-sizing",
-    "align-content",
-    "align-items",
-    "align-self",
     "flex",
     "flex-basis",
     "flex-direction",
@@ -46,6 +43,9 @@ var displayAndBoxModel = []
     "flex-grow",
     "flex-shrink",
     "flex-wrap",
+    "align-content",
+    "align-items",
+    "align-self",
     "justify-content",
     "order"
   ])
