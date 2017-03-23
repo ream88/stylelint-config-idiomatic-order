@@ -4,11 +4,12 @@
   "description": "stylelint + idiomatic-css = ❤️",
   "main": "index.js",
   "dependencies": {
-    "stylelint": "^7.0.3",
-    "stylelint-config-standard": "^11.0.0"
+    "stylelint": "^7.9.0",
+    "stylelint-config-standard": "^16.0.0",
+    "stylelint-order": "^0.4.1"
   },
   "devDependencies": {
-    "eslint": "^3.2.0"
+    "eslint": "^3.18.0"
   },
   "scripts": {
     "lint": "eslint --fix src.js",
