@@ -54,10 +54,12 @@ var displayAndBoxModel = []
   .concat(trbl("margin"));
 
 module.exports = {
+  "plugins": "stylelint-order",
   "extends": "stylelint-config-standard",
   "rules": {
     "order/properties-order": [
-      { "properties": positioning.concat(displayAndBoxModel), "unspecified": "bottomAlphabetical" }
+      positioning.concat(displayAndBoxModel),
+      { "unspecified": "bottomAlphabetical" }
     ]
   }
 };
