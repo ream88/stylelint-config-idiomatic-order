@@ -55,7 +55,6 @@ var displayAndBoxModel = []
 
 module.exports = {
   "plugins": "stylelint-order",
-  "extends": "stylelint-config-standard",
   "rules": {
     "order/properties-order": [
       positioning.concat(displayAndBoxModel),
