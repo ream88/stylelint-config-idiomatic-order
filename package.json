@@ -5,7 +5,6 @@
   "main": "index.js",
   "dependencies": {
     "stylelint": "^9.6.0",
-    "stylelint-config-standard": "^18.2.0",
     "stylelint-order": "^1.0.0"
   },
   "devDependencies": {
