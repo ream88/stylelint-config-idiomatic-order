@@ -20,6 +20,11 @@ function minMax(suffix) {
   return [suffix, "min-" + suffix, "max-" + suffix];
 }
 
+var cssModules = []
+  .concat([
+    "composes"
+  ]);
+
 var positioning = []
   .concat([
     "position",
@@ -57,7 +62,9 @@ module.exports = {
   "plugins": "stylelint-order",
   "rules": {
     "order/properties-order": [
-      positioning.concat(displayAndBoxModel),
+      cssModules
+      .concat(positioning)
+      .concat(displayAndBoxModel),
       { "unspecified": "bottomAlphabetical" }
     ]
   }
