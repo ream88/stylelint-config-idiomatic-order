@@ -6,7 +6,7 @@
   "dependencies": {
     "stylelint": "^7.0.3",
     "stylelint-config-standard": "^16.0.0",
-    "stylelint-order": "^0.5.0"
+    "stylelint-order": "^1.0.0"
   },
   "devDependencies": {
     "eslint": "^4.0.0"
