@@ -11,7 +11,7 @@
     "eslint": "^5.6.1"
   },
   "scripts": {
-    "lint": "eslint --fix src.js",
+    "lint": "eslint --fix index.js",
     "test": "node test.js"
   },
   "repository": {

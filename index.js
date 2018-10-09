@@ -63,8 +63,8 @@ module.exports = {
   "rules": {
     "order/properties-order": [
       cssModules
-      .concat(positioning)
-      .concat(displayAndBoxModel),
+        .concat(positioning)
+        .concat(displayAndBoxModel),
       { "unspecified": "bottomAlphabetical" }
     ]
   }
