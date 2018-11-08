@@ -20,6 +20,21 @@ function minMax(suffix) {
   return [suffix, "min-" + suffix, "max-" + suffix];
 }
 
+function border(infix) {
+  if (infix) {
+    infix = "-" + infix;
+  } else {
+    infix = "";
+  }
+
+  return [
+    "border" + infix,
+    "border" + infix + "-width",
+    "border" + infix + "-style",
+    "border" + infix + "-color"
+  ];
+}
+
 var cssModules = []
   .concat([
     "composes"
@@ -58,13 +73,22 @@ var displayAndBoxModel = []
   .concat(trbl("border"))
   .concat(trbl("margin"));
 
+var borders = []
+  .concat(border())
+  .concat(border("top"))
+  .concat(border("right"))
+  .concat(border("bottom"))
+  .concat(border("left"))
+
 module.exports = {
   "plugins": "stylelint-order",
   "rules": {
     "order/properties-order": [
-      cssModules
+      []
+        .concat(cssModules)
         .concat(positioning)
-        .concat(displayAndBoxModel),
+        .concat(displayAndBoxModel)
+        .concat(borders),
       { "unspecified": "bottomAlphabetical" }
     ]
   }
