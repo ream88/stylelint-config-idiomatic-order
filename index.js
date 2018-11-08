@@ -78,7 +78,7 @@ var borders = []
   .concat(border("top"))
   .concat(border("right"))
   .concat(border("bottom"))
-  .concat(border("left"))
+  .concat(border("left"));
 
 module.exports = {
   "plugins": "stylelint-order",
