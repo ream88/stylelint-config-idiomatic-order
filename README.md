@@ -1,6 +1,4 @@
-# stylelint-config-idiomatic-order
-
-> stylelint + idiomatic-css = ❤️
+# stylelint + idiomatic-css = ❤️
 
 Order your styles based on [idiomatic-css](https://github.com/necolas/idiomatic-css#declaration-order).
 
