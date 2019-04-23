@@ -70,15 +70,13 @@ var displayAndBoxModel = []
     "order"
   ])
   .concat(trbl("padding"))
-  .concat(trbl("border"))
+  .concat([]
+    .concat(border())
+    .concat(border("top"))
+    .concat(border("right"))
+    .concat(border("bottom"))
+    .concat(border("left")))
   .concat(trbl("margin"));
-
-var borders = []
-  .concat(border())
-  .concat(border("top"))
-  .concat(border("right"))
-  .concat(border("bottom"))
-  .concat(border("left"));
 
 module.exports = {
   "plugins": "stylelint-order",
@@ -87,8 +85,7 @@ module.exports = {
       []
         .concat(cssModules)
         .concat(positioning)
-        .concat(displayAndBoxModel)
-        .concat(borders),
+        .concat(displayAndBoxModel),
       { "unspecified": "bottomAlphabetical" }
     ]
   }
