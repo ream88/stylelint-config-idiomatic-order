@@ -1,92 +1,92 @@
-function trbl(prefix) {
-  var rules = [];
+function trbl (prefix) {
+  var rules = []
 
   if (prefix) {
-    rules.push(prefix);
-    prefix = prefix + "-";
+    rules.push(prefix)
+    prefix = prefix + '-'
   } else {
-    prefix = "";
+    prefix = ''
   }
 
   return rules.concat([
-    prefix + "top",
-    prefix + "right",
-    prefix + "bottom",
-    prefix + "left"
-  ]);
+    prefix + 'top',
+    prefix + 'right',
+    prefix + 'bottom',
+    prefix + 'left'
+  ])
 }
 
-function minMax(suffix) {
-  return [suffix, "min-" + suffix, "max-" + suffix];
+function minMax (suffix) {
+  return [suffix, 'min-' + suffix, 'max-' + suffix]
 }
 
-function border(infix) {
+function border (infix) {
   if (infix) {
-    infix = "-" + infix;
+    infix = '-' + infix
   } else {
-    infix = "";
+    infix = ''
   }
 
   return [
-    "border" + infix,
-    "border" + infix + "-width",
-    "border" + infix + "-style",
-    "border" + infix + "-color"
-  ];
+    'border' + infix,
+    'border' + infix + '-width',
+    'border' + infix + '-style',
+    'border' + infix + '-color'
+  ]
 }
 
 var cssModules = []
   .concat([
-    "composes"
-  ]);
+    'composes'
+  ])
 
 var positioning = []
   .concat([
-    "position",
-    "z-index"
+    'position',
+    'z-index'
   ])
-  .concat(trbl());
+  .concat(trbl())
 
 var displayAndBoxModel = []
   .concat([
-    "display",
-    "overflow"
+    'display',
+    'overflow'
   ])
-  .concat(minMax("width"))
-  .concat(minMax("height"))
+  .concat(minMax('width'))
+  .concat(minMax('height'))
   .concat([
-    "box-sizing",
-    "flex",
-    "flex-basis",
-    "flex-direction",
-    "flex-flow",
-    "flex-grow",
-    "flex-shrink",
-    "flex-wrap",
-    "align-content",
-    "align-items",
-    "align-self",
-    "justify-content",
-    "order"
+    'box-sizing',
+    'flex',
+    'flex-basis',
+    'flex-direction',
+    'flex-flow',
+    'flex-grow',
+    'flex-shrink',
+    'flex-wrap',
+    'align-content',
+    'align-items',
+    'align-self',
+    'justify-content',
+    'order'
   ])
-  .concat(trbl("padding"))
+  .concat(trbl('padding'))
   .concat([]
     .concat(border())
-    .concat(border("top"))
-    .concat(border("right"))
-    .concat(border("bottom"))
-    .concat(border("left")))
-  .concat(trbl("margin"));
+    .concat(border('top'))
+    .concat(border('right'))
+    .concat(border('bottom'))
+    .concat(border('left')))
+  .concat(trbl('margin'))
 
 module.exports = {
-  "plugins": "stylelint-order",
-  "rules": {
-    "order/properties-order": [
+  'plugins': 'stylelint-order',
+  'rules': {
+    'order/properties-order': [
       []
         .concat(cssModules)
         .concat(positioning)
         .concat(displayAndBoxModel),
-      { "unspecified": "bottomAlphabetical" }
+      { 'unspecified': 'bottomAlphabetical' }
     ]
   }
-};
+}
