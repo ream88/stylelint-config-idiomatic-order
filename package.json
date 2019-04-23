@@ -11,8 +11,8 @@
     "standard": "^12.0.1"
   },
   "scripts": {
-    "lint": "standard --fix *.js",
-    "test": "node test.js"
+    "lint": "standard --fix index.js test/*.js",
+    "test": "node test/test.js"
   },
   "repository": {
     "type": "git",
