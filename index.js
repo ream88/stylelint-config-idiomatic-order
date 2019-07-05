@@ -40,6 +40,8 @@ var cssModules = []
     'composes'
   ])
 
+var reset = ['all']
+
 var positioning = []
   .concat([
     'position',
@@ -84,6 +86,7 @@ module.exports = {
     'order/properties-order': [
       []
         .concat(cssModules)
+        .concat(reset)
         .concat(positioning)
         .concat(displayAndBoxModel),
       { 'unspecified': 'bottomAlphabetical' }
