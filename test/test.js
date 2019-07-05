@@ -13,7 +13,7 @@ function testOrder () {
   const fixture = fs.readFileSync(path.join(__dirname, 'fixture.css'), 'utf8')
   const expected = fs.readFileSync(path.join(__dirname, 'expected.css'), 'utf8')
 
-  stylelint.lint({
+  return stylelint.lint({
     code: fixture,
     config: require('..'),
     fix: true
@@ -24,4 +24,12 @@ function testOrder () {
 }
 
 testConfigFile()
-testOrder()
+testOrder().catch((e) => {
+  if (process.env.DEBUG) {
+    console.error(e.message)
+  } else {
+    console.error(e.name)
+    console.error('Run with the DEBUG environement variable to see more.')
+  }
+  process.exit(-1)
+})
