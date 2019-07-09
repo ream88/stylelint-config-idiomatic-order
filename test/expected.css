@@ -53,6 +53,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 }
 
 body {
+  all: unset;
   margin: 0;
   background-color: #fff;
   color: #212529;
