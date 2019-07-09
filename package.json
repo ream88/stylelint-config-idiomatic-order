@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-idiomatic-order",
-  "version": "7.0.2",
+  "version": "7.0.3",
   "description": "stylelint + idiomatic-css = ❤️",
   "main": "index.js",
   "dependencies": {
