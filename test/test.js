@@ -7,6 +7,8 @@ function testConfigFile () {
   assert.doesNotThrow(() => {
     require(path.join(__dirname, '..', 'index.js'))
   })
+
+  return Promise.resolve()
 }
 
 function testOrder () {
@@ -19,17 +21,13 @@ function testOrder () {
     fix: true
   }).then(result => {
     assert.strictEqual(result.errored, false)
-    assert.strictEqual(result.output, expected)
+    assert.strictEqual(result.output, expected, 'Stylelint output does not equal expected output')
   })
 }
 
-testConfigFile()
-testOrder().catch((e) => {
-  if (process.env.DEBUG) {
-    console.error(e.message)
-  } else {
-    console.error(e.name)
-    console.error('Run with the DEBUG environement variable to see more.')
-  }
-  process.exit(-1)
-})
+Promise
+  .all([testConfigFile(), testOrder()])
+  .catch(e => {
+    console.error(e.name, e.message)
+    process.exit(-1)
+  })
