@@ -81,15 +81,15 @@ var displayAndBoxModel = []
   .concat(trbl('margin'))
 
 module.exports = {
-  'plugins': 'stylelint-order',
-  'rules': {
+  plugins: 'stylelint-order',
+  rules: {
     'order/properties-order': [
       []
         .concat(cssModules)
         .concat(reset)
         .concat(positioning)
         .concat(displayAndBoxModel),
-      { 'unspecified': 'bottomAlphabetical' }
+      { unspecified: 'bottomAlphabetical' }
     ]
   }
 }
