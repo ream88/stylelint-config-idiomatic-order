@@ -5,7 +5,7 @@ Order your styles based on [idiomatic-css](https://github.com/necolas/idiomatic-
 ## Installation
 
 ```sh
-npm install stylelint-config-idiomatic-order
+npm install --save-dev stylelint-config-idiomatic-order
 ```
 
 ## Usage
