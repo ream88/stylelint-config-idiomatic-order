@@ -27,6 +27,7 @@ function testOrder () {
 
 Promise
   .all([testConfigFile(), testOrder()])
+  .then(() => console.log('OK'))
   .catch(e => {
     console.error(e.name, e.message)
     process.exit(-1)
