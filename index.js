@@ -31,7 +31,8 @@ function border (infix) {
     'border' + infix,
     'border' + infix + '-width',
     'border' + infix + '-style',
-    'border' + infix + '-color'
+    'border' + infix + '-color',
+    'border' + infix + '-radius'
   ]
 }
 
