@@ -4,7 +4,7 @@
   "description": "stylelint + idiomatic-css = ❤️",
   "main": "index.js",
   "dependencies": {
-    "stylelint-order": "^3.1.1"
+    "stylelint-order": "^4.1.0"
   },
   "devDependencies": {
     "standard": "^14.3.1",
