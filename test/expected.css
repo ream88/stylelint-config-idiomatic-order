@@ -542,8 +542,8 @@ pre code {
 }
 
 .pre-scrollable {
-  max-height: 340px;
   overflow-y: scroll;
+  max-height: 340px;
 }
 
 .container {
@@ -1799,9 +1799,9 @@ pre code {
 @media (max-width: 575.98px) {
   .table-responsive-sm {
     display: block;
+    overflow-x: auto;
     width: 100%;
     -webkit-overflow-scrolling: touch;
-    overflow-x: auto;
   }
   .table-responsive-sm > .table-bordered {
     border: 0;
@@ -1811,9 +1811,9 @@ pre code {
 @media (max-width: 767.98px) {
   .table-responsive-md {
     display: block;
+    overflow-x: auto;
     width: 100%;
     -webkit-overflow-scrolling: touch;
-    overflow-x: auto;
   }
   .table-responsive-md > .table-bordered {
     border: 0;
@@ -1823,9 +1823,9 @@ pre code {
 @media (max-width: 991.98px) {
   .table-responsive-lg {
     display: block;
+    overflow-x: auto;
     width: 100%;
     -webkit-overflow-scrolling: touch;
-    overflow-x: auto;
   }
   .table-responsive-lg > .table-bordered {
     border: 0;
@@ -1835,9 +1835,9 @@ pre code {
 @media (max-width: 1199.98px) {
   .table-responsive-xl {
     display: block;
+    overflow-x: auto;
     width: 100%;
     -webkit-overflow-scrolling: touch;
-    overflow-x: auto;
   }
   .table-responsive-xl > .table-bordered {
     border: 0;
@@ -1846,9 +1846,9 @@ pre code {
 
 .table-responsive {
   display: block;
+  overflow-x: auto;
   width: 100%;
   -webkit-overflow-scrolling: touch;
-  overflow-x: auto;
 }
 
 .table-responsive > .table-bordered {
