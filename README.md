@@ -18,6 +18,6 @@ Set your stylelint config to:
 }
 ```
 
-You can easily [extend](https://github.com/stylelint/stylelint/blob/master/docs/user-guide/configuration.md#extends) the config to your needs.
+You can easily [extend](https://github.com/stylelint/stylelint/blob/master/docs/user-guide/configure.md#extends) the config to your needs.
 
 ## [License](LICENSE)
