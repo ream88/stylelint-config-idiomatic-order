@@ -16,6 +16,10 @@ function trbl (prefix) {
   ])
 }
 
+function startEnd (prefix) {
+  return [prefix + '-start', prefix + '-end']
+}
+
 function minMax (suffix) {
   return [suffix, 'min-' + suffix, 'max-' + suffix]
 }
@@ -49,6 +53,8 @@ var positioning = []
     'z-index'
   ])
   .concat(trbl())
+  .concat(startEnd('inset-block'))
+  .concat(startEnd('inset-inline'))
 
 var displayAndBoxModel = []
   .concat([
@@ -56,7 +62,9 @@ var displayAndBoxModel = []
     'overflow'
   ])
   .concat(minMax('width'))
+  .concat(minMax('inline-size'))
   .concat(minMax('height'))
+  .concat(minMax('block-size'))
   .concat([
     'box-sizing',
     'flex',
@@ -73,13 +81,28 @@ var displayAndBoxModel = []
     'order'
   ])
   .concat(trbl('padding'))
+  .concat(startEnd('padding-block'))
+  .concat(startEnd('padding-inline'))
   .concat([]
     .concat(border())
     .concat(border('top'))
     .concat(border('right'))
     .concat(border('bottom'))
-    .concat(border('left')))
+    .concat(border('left'))
+    .concat(border('block-start'))
+    .concat(border('block-end'))
+    .concat(border('inline-start'))
+    .concat(border('inline-end'))
+    .concat([
+      'border-start-start-radius',
+      'border-start-end-radius',
+      'border-end-start-radius',
+      'border-end-end-radius'
+    ])
+  )
   .concat(trbl('margin'))
+  .concat(startEnd('margin-block'))
+  .concat(startEnd('margin-inline'))
 
 module.exports = {
   plugins: 'stylelint-order',
