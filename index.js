@@ -1,5 +1,5 @@
 function trbl (prefix) {
-  var rules = []
+  const rules = []
 
   if (prefix) {
     rules.push(prefix)
@@ -36,21 +36,21 @@ function border (infix) {
   ]
 }
 
-var cssModules = []
+const cssModules = []
   .concat([
     'composes'
   ])
 
-var reset = ['all']
+const reset = ['all']
 
-var positioning = []
+const positioning = []
   .concat([
     'position',
     'z-index'
   ])
   .concat(trbl())
 
-var displayAndBoxModel = []
+const displayAndBoxModel = []
   .concat([
     'display',
     'overflow'

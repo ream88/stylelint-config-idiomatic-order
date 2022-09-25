@@ -1,19 +1,16 @@
-name: Node.js CI
+name: Test
 
 on:
   push:
-    branches: [ main ]
   pull_request:
-    branches: [ main ]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        node-version: [10, 12, 14, 16, 18]
+        node-version: [12, 14, 16, 18]
 
     steps:
       - uses: actions/checkout@v3
