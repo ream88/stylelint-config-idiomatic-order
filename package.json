@@ -6,6 +6,9 @@
   "dependencies": {
     "stylelint-order": "^5.0.0"
   },
+  "engines": {
+    "node": ">=12"
+  },
   "devDependencies": {
     "standard": "^17.0.0",
     "stylelint": "^14.12.1"
