@@ -427,6 +427,20 @@ hr {
   margin-bottom: 1rem;
 }
 
+button {
+  position: absolute;
+  inset: 5px 2px 3px 1px;
+  inset-block-start: 5px;
+  inset-block-end: 2px;
+  inset-inline-start: 12px;
+  inset-inline-end: 2rem;
+  padding-inline-start: var(--selected-left-border-width);
+  border-block-start: 1px solid var(--grey-30);
+  border-inline-start: none;
+  margin-inline-start: 1px;
+  background-color: #fff;
+}
+
 small,
 .small {
   font-size: 80%;

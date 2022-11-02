@@ -16,6 +16,20 @@ function trbl (prefix) {
   ])
 }
 
+function logical (prefix) {
+  const rules = [prefix]
+  prefix += '-'
+
+  return rules.concat([
+    prefix + 'block',
+    prefix + 'block-start',
+    prefix + 'block-end',
+    prefix + 'inline',
+    prefix + 'inline-start',
+    prefix + 'inline-end',
+  ])
+}
+
 function minMax (suffix) {
   return [suffix, 'min-' + suffix, 'max-' + suffix]
 }
@@ -49,6 +63,7 @@ const positioning = []
     'z-index'
   ])
   .concat(trbl())
+  .concat(logical("inset"))
 
 const displayAndBoxModel = []
   .concat([
@@ -73,13 +88,18 @@ const displayAndBoxModel = []
     'order'
   ])
   .concat(trbl('padding'))
-  .concat([]
-    .concat(border())
-    .concat(border('top'))
-    .concat(border('right'))
-    .concat(border('bottom'))
-    .concat(border('left')))
+  .concat(logical('padding'))
+  .concat(border())
+  .concat(border('top'))
+  .concat(border('right'))
+  .concat(border('bottom'))
+  .concat(border('left'))
+  .concat(border('block-start'))
+  .concat(border('block-end'))
+  .concat(border('inline-start'))
+  .concat(border('inline-end'))
   .concat(trbl('margin'))
+  .concat(logical('margin'))
 
 module.exports = {
   plugins: 'stylelint-order',
