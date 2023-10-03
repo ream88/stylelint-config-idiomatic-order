@@ -25,8 +25,22 @@ function testOrder () {
   })
 }
 
+function testLogicalPropertiesOrder () {
+  const fixture = fs.readFileSync(path.join(__dirname, 'fixtureLogicalProperties.css'), 'utf8')
+  const expected = fs.readFileSync(path.join(__dirname, 'expectedLogicalProperties.css'), 'utf8')
+
+  return stylelint.lint({
+    code: fixture,
+    config: require('..'),
+    fix: true
+  }).then(result => {
+    assert.strictEqual(result.errored, false)
+    assert.strictEqual(result.output, expected, 'Stylelint output does not equal expected output')
+  })
+}
+
 Promise
-  .all([testConfigFile(), testOrder()])
+  .all([testConfigFile(), testOrder(), testLogicalPropertiesOrder()])
   .then(() => console.log('OK'))
   .catch(e => {
     console.error(e.name, e.message)
