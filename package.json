@@ -7,14 +7,14 @@
     "stylelint-order": "^6.0.2"
   },
   "engines": {
-    "node": ">=12"
+    "node": ">=16"
   },
   "devDependencies": {
     "standard": "^17.0.0",
     "stylelint": "^15.1.0"
   },
   "peerDependencies": {
-    "stylelint": ">=11"
+    "stylelint": "^14.0.0 || ^15.0.0"
   },
   "scripts": {
     "lint": "standard --fix index.js test/*.js",
